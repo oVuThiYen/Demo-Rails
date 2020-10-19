@@ -1,0 +1,24 @@
+<%= form_with model: @user, local: true  do |f| %>
+  <h1 class="my-4">Edit User</h1>
+  <div class="form-group">
+    <label for="">User</label>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="">Age</label>
+    <%= f.number_field :age, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="">PassWord</label>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="">Confirm PassWord</label>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+  </div>
+  <%= f.submit 'Save', :class => 'btn btn-success' %>
+<% end %>
